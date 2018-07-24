@@ -93,7 +93,7 @@ function numberFour() {
 function numberFive() {
   enableAllOperator();
 
-  let insertAdd = documenadd.getElementById("theOperation");
+  let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "5";
 
 }
