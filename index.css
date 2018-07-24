@@ -24,36 +24,51 @@ body {
 }
 
 .calculate-result {
+    display: inherit;
     font-size: 25px;
     padding-left: 9em;
     padding-right: 9em;
     margin: 10px;
-    margin-top: -8px;
+    margin-top: -6px;
+}
+
+.the-clear-button {
+    display: inherit;
+    font-size: 25px;
+    padding-left: 8em;
+    padding-right: 8em;
+    margin: 10px;
+    margin-top: -5px;
 }
 
 .operation-button {
     padding-left: 2em;
     padding-right: 2em;
     padding-top: 1em;
-    padding-bottom: 1em;    
+    padding-bottom: 1em;
 }
 
 .operation-results {
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
     font-size: 2em;
 }
 
 .the-calculator {
     display: inline-block;
-    background-color:rgba(255, 255, 255, 0.87);
+    background-color: rgba(255, 255, 255, 0.87);
     border-radius: 8px;
     padding: 1em;
 }
 
 .the-numbers {
-    
-    display: flex;
-    justify-content: center;
+    margin-top: 4px;
+    width: 150px;
+    margin-left: 165px;
+}
 
+.numbers {
+    padding: 10px;
+    margin: 2px;
+    font-size: 17px;
 }

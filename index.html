@@ -16,9 +16,11 @@
             <input id="theOperation" class="the-input" type="text" placeholder="1+1=11">
             <div class="operation-button">
                 <div class="result-button">
-                    <button class="calculate-result" onclick="calculateMate()">=</button>
+                    <button id="resultButton" disabled class="calculate-result" onclick="calculateMate()">=</button>
                 </div>
-
+                <div class="clear-button">
+                    <button class="the-clear-button" onclick="clearAll()">Clear</button>
+                </div>
                 <div>
                     <button class="operation-button" onclick="addOperation()">+</button>
                     <button class="operation-button" onclick="subtractOperation()">-</button>
@@ -26,15 +28,15 @@
                     <button class="operation-button" onclick="moduloOperation()">%</button>
                 </div>
                 <div class="the-numbers">
-                    <button onclick="numberOne()">1</button>
-                    <button onclick="numberTwo()">2</button>
-                    <button onclick="numberThree()">3</button>
-                    <button onclick="numberFour()">4</button>
-                    <button onclick="numberFive()">5</button>
-                    <button onclick="numberSix()">6</button>
-                    <button onclick="numberSeven()">7</button>
-                    <button onclick="numberEight()">8</button>
-                    <button onclick="numberNine()">9</button>
+                    <button class="numbers" onclick="numberOne()">1</button>
+                    <button class="numbers" onclick="numberTwo()">2</button>
+                    <button class="numbers" onclick="numberThree()">3</button>
+                    <button class="numbers" onclick="numberFour()">4</button>
+                    <button class="numbers" onclick="numberFive()">5</button>
+                    <button class="numbers" onclick="numberSix()">6</button>
+                    <button class="numbers" onclick="numberSeven()">7</button>
+                    <button class="numbers" onclick="numberEight()">8</button>
+                    <button class="numbers" onclick="numberNine()">9</button>
                 </div>
             </div>
 

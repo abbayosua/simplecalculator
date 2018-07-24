@@ -2,30 +2,34 @@
 function calculateMate() {
   let inputOperation = document.getElementById("theOperation").value;
   let calculatorProcess = eval(inputOperation);
-  document.getElementById("results").innerHTML = calculatorProcess;
+  document.getElementById("theOperation").value = calculatorProcess;
   event.preventDefault();
 
 }
 
 function addOperation() {
+  document.getElementById("resultButton").disabled = false;
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "+";
   event.preventDefault();
 }
 
 function subtractOperation() {
+  document.getElementById("resultButton").disabled = false;
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "-";
   event.preventDefault();
 }
 
 function divideOperation() {
+  document.getElementById("resultButton").disabled = false;
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "/";
   event.preventDefault();
 }
 
 function moduloOperation() {
+  document.getElementById("resultButton").disabled = false;
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "%";
   event.preventDefault();
@@ -84,5 +88,13 @@ function numberEight() {
 function numberNine() {
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "9";
+  event.preventDefault();
+}
+
+//clear All
+function clearAll() {
+  document.getElementById("resultButton").disabled = true;
+  let insertAdd = document.getElementById("theOperation");
+  insertAdd.value = "";
   event.preventDefault();
 }
