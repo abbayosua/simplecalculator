@@ -1,11 +1,14 @@
+disableAllOperator();
+
 //calculateMate
 function calculateMate() {
-  enableAllOperator()
+  enableAllOperator();
 
   let inputOperation = document.getElementById("theOperation").value;
-  let calculatorProcess = eval(inputOperation);
+  const calculatorProcess = eval(inputOperation);
   document.getElementById("theOperation").value = calculatorProcess;
 
+  disableAllNumbers();
 }
 
 function addOperation() {
@@ -14,7 +17,7 @@ function addOperation() {
   document.getElementById("resultButton").disabled = false;
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "+";
- 
+
 }
 
 function subtractOperation() {
@@ -23,7 +26,7 @@ function subtractOperation() {
   document.getElementById("resultButton").disabled = false;
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "-";
- 
+
 }
 
 function multiplyOperation() {
@@ -32,7 +35,7 @@ function multiplyOperation() {
   document.getElementById("resultButton").disabled = false;
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "*";
- 
+
 }
 
 function divideOperation() {
@@ -41,7 +44,7 @@ function divideOperation() {
   document.getElementById("resultButton").disabled = false;
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "/";
- 
+
 }
 
 function moduloOperation() {
@@ -50,7 +53,7 @@ function moduloOperation() {
   document.getElementById("resultButton").disabled = false;
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "%";
- 
+
 }
 
 //the numbers function
@@ -60,7 +63,7 @@ function numberOne() {
 
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "1";
- 
+
 }
 
 function numberTwo() {
@@ -68,15 +71,15 @@ function numberTwo() {
 
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "2";
- 
+
 }
 
 function numberThree() {
   enableAllOperator()
-  
+
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "3";
- 
+
 }
 
 function numberFour() {
@@ -84,7 +87,7 @@ function numberFour() {
 
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "4";
- 
+
 }
 
 function numberFive() {
@@ -92,7 +95,7 @@ function numberFive() {
 
   let insertAdd = documenadd.getElementById("theOperation");
   insertAdd.value += "5";
- 
+
 }
 
 function numberSix() {
@@ -100,7 +103,7 @@ function numberSix() {
 
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "6";
- 
+
 }
 
 function numberSeven() {
@@ -108,7 +111,7 @@ function numberSeven() {
 
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "7";
- 
+
 }
 
 function numberEight() {
@@ -116,7 +119,7 @@ function numberEight() {
 
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "8";
- 
+
 }
 
 function numberNine() {
@@ -124,7 +127,7 @@ function numberNine() {
 
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "9";
- 
+
 }
 
 function numberZero() {
@@ -132,12 +135,15 @@ function numberZero() {
 
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value += "0";
- 
+
 }
 
 
 //clear All
 function clearAll() {
+  disableAllOperator();
+  enableAllNumbers();
+
   document.getElementById("resultButton").disabled = true;
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value = "";
@@ -147,11 +153,13 @@ function clearAll() {
 function clearOne() {
   let insertAdd = document.getElementById("theOperation");
   insertAdd.value = (insertAdd.value).slice(0, -1);
- 
+
 }
 
 //a bunch of function that i need so i doesnt need type very much
 function disableAllOperator() {
+  enableAllNumbers();
+
   document.getElementById("addOperator").disabled = true;
   document.getElementById("subtractOperator").disabled = true;
   document.getElementById("divideOperator").disabled = true;
@@ -166,9 +174,37 @@ function enableAllOperator() {
   document.getElementById("multiplyOperator").disabled = false;
   document.getElementById("moduloOperator").disabled = false;
 }
+
+//disable all numbers button
 function disableAllNumbers() {
-  var cells = table.getElementsByClassName("numbers"); 
-for (var i = 0; i < cells.length; i++) { 
-    cells[i].disabled = true;
+  document.getElementsByClassName("numbers")[0].disabled = true;
+  document.getElementsByClassName("numbers")[1].disabled = true;
+  document.getElementsByClassName("numbers")[2].disabled = true;
+  document.getElementsByClassName("numbers")[3].disabled = true;
+  document.getElementsByClassName("numbers")[4].disabled = true;
+  document.getElementsByClassName("numbers")[5].disabled = true;
+  document.getElementsByClassName("numbers")[6].disabled = true;
+  document.getElementsByClassName("numbers")[7].disabled = true;
+  document.getElementsByClassName("numbers")[8].disabled = true;
+
+  document.getElementsByClassName("zero-and-delete")[0].disabled = true;
+  document.getElementsByClassName("zero-and-delete")[1].disabled = true;
+
 }
+
+//enable all numbers button
+function enableAllNumbers() {
+  document.getElementsByClassName("numbers")[0].disabled = false;
+  document.getElementsByClassName("numbers")[1].disabled = false;
+  document.getElementsByClassName("numbers")[2].disabled = false;
+  document.getElementsByClassName("numbers")[3].disabled = false;
+  document.getElementsByClassName("numbers")[4].disabled = false;
+  document.getElementsByClassName("numbers")[5].disabled = false;
+  document.getElementsByClassName("numbers")[6].disabled = false;
+  document.getElementsByClassName("numbers")[7].disabled = false;
+  document.getElementsByClassName("numbers")[8].disabled = false;
+
+  document.getElementsByClassName("zero-and-delete")[0].disabled = false;
+  document.getElementsByClassName("zero-and-delete")[1].disabled = false;
+
 }
