@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <title>Learn JS - calculator Math</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+
+<body>
+    <div class="the-title">
+        Calc-o-lator
+    </div>
+
+    <div class="the-calculator">
+        <form>
+            <input id="theOperation" class="the-input" type="text" placeholder="1+1=11">
+            <div class="operation-button">
+                <div class="result-button">
+                    <button class="calculate-result" onclick="calculateMate()">=</button>
+                </div>
+
+                <div>
+                    <button class="operation-button" onclick="addOperation()">+</button>
+                    <button class="operation-button" onclick="subtractOperation()">-</button>
+                    <button class="operation-button" onclick="divideOperation()">/</button>
+                    <button class="operation-button" onclick="moduloOperation()">%</button>
+                </div>
+                <div class="the-numbers">
+                    <button onclick="numberOne()">1</button>
+                    <button onclick="numberTwo()">2</button>
+                    <button onclick="numberThree()">3</button>
+                    <button onclick="numberFour()">4</button>
+                    <button onclick="numberFive()">5</button>
+                    <button onclick="numberSix()">6</button>
+                    <button onclick="numberSeven()">7</button>
+                    <button onclick="numberEight()">8</button>
+                    <button onclick="numberNine()">9</button>
+                </div>
+            </div>
+
+        </form>
+        <div id="results" class="operation-results">
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
