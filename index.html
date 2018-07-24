@@ -16,8 +16,8 @@
     </div>
 
     <div class="the-calculator">
-        <form>
-            <input id="theOperation" class="the-input" type="text" placeholder="1+1=11">
+        <form onsubmit="event.preventDefault()">
+            <input disabled id="theOperation" class="the-input" type="text" placeholder="0">
             <div class="operation-button">
                 <div class="result-button">
                     <button id="resultButton" disabled class="calculate-result" onclick="calculateMate()">=</button>
@@ -28,7 +28,8 @@
                 <div>
                     <button class="operation-button" onclick="addOperation()">+</button>
                     <button class="operation-button" onclick="subtractOperation()">-</button>
-                    <button class="operation-button" onclick="divideOperation()">/</button>
+                    <button class="operation-button" onclick="multiplyOperation()">X</button>
+                    <button class="operation-button" onclick="divideOperation()">➗</button>
                     <button class="operation-button" onclick="moduloOperation()">%</button>
                 </div>
                 <div class="the-numbers">
@@ -42,6 +43,10 @@
                     <button class="numbers" onclick="numberEight()">8</button>
                     <button class="numbers" onclick="numberNine()">9</button>
                 </div>
+                <div class="zero-and-delete">
+                    <button onclick="clearOne">C</button>
+                    <button onclick="numberZero()">0</button>
+                </div>
             </div>
 
         </form>
@@ -50,5 +55,3 @@
     </div>
     <script src="index.js"></script>
 </body>
-
-</html>
