@@ -26,11 +26,11 @@
                     <button class="the-clear-button" onclick="clearAll()">Clear</button>
                 </div>
                 <div>
-                    <button class="operation-button" onclick="addOperation()">+</button>
-                    <button class="operation-button" onclick="subtractOperation()">-</button>
-                    <button class="operation-button" onclick="multiplyOperation()">X</button>
-                    <button class="operation-button" onclick="divideOperation()">➗</button>
-                    <button class="operation-button" onclick="moduloOperation()">%</button>
+                    <button id="addOperator" class="operation-button" onclick="addOperation()">+</button>
+                    <button id="subtractOperator" class="operation-button" onclick="subtractOperation()">-</button>
+                    <button id="multiplyOperator" class="operation-button" onclick="multiplyOperation()">X</button>
+                    <button id="divideOperator" class="operation-button" onclick="divideOperation()">➗</button>
+                    <button id="moduloOperator" class="operation-button" onclick="moduloOperation()">%</button>
                 </div>
                 <div class="the-numbers">
                     <button class="numbers" onclick="numberOne()">1</button>
@@ -43,9 +43,9 @@
                     <button class="numbers" onclick="numberEight()">8</button>
                     <button class="numbers" onclick="numberNine()">9</button>
                 </div>
-                <div class="zero-and-delete">
-                    <button onclick="clearOne">C</button>
-                    <button onclick="numberZero()">0</button>
+                <div class="container-delete-and-zero">
+                    <button class="zero-and-delete" onclick="clearOne()">C</button>
+                    <button class="zero-and-delete" onclick="numberZero()">0</button>
                 </div>
             </div>
 

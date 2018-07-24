@@ -72,3 +72,11 @@ body {
     margin: 2px;
     font-size: 17px;
 }
+
+.container-delete-and-zero {
+    margin-left: -10px;
+}
+
+.zero-and-delete {
+    padding: 20px;
+}
